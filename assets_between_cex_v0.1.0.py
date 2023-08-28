@@ -353,10 +353,10 @@ for token, balance in binance_spot_balances.items():
         # 打印代幣價值
         #print(f'{token} 的價值為 {value} USDT')
     
-    # 如果沒有現貨對，則跳過該代幣
     except:
-        pass
-        #print(f'{token} 沒有現貨對，跳過該代幣')
+        # 如果沒有查詢到，則代表為USDT，直接加入計算
+        value = float(binance_spot_balances['netAsset']) * 1
+        binance_spot_usdt_equity += value
 
 end_time = time.time()
 print('Binance 現貨查詢完成，耗時', end_time - start_time, '秒')
