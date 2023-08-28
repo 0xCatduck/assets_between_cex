@@ -2,7 +2,7 @@
 # 紀錄各交易所資產(Binance、Bybit、Bitget)
 # 作者:0xCatduck
 # https://twitter.com/0xCatduck
-# 版本: v0.1.0
+# 版本: v0.1.1
 # 2023/08/29
 
 # 待修正: 多線程查詢；修正查詢方法降低耗時
@@ -355,7 +355,7 @@ for token, balance in binance_spot_balances.items():
     
     except:
         # 如果沒有查詢到，則代表為USDT，直接加入計算
-        value = float(binance_spot_balances['netAsset']) * 1
+        value = float(balance) * 1
         binance_spot_usdt_equity += value
 
 end_time = time.time()
