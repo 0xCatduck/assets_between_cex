@@ -1,11 +1,11 @@
 # 項目標題
 
-查詢多間交易所的總資產餘額並記錄excel
+紀錄各交易所淨值
+Record the net value of multiple centralized exchanges
 
 ## 使用方法
 
-v0.1.0
-供測試人員測試
+
 
 ## 貢獻
 
